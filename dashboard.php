@@ -79,15 +79,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>Welcome, <?php echo $user["username"]; ?></h1>
             <?php if ($user["role"] === "admin"): ?>
                 <p>You have admin privileges. Choose an option:</p>
-                <a href="role_management.php">Role Dashboard</a>
+                <!-- <a href="role_management.php">Role Dashboard</a> -->
+                <a href="test_role.php">Role Dashboard</a>
                 <a href="logout.php">Logout</a>
             <?php elseif ($user["role"] === "manager"): ?>
                 <p>You have manager privileges. Choose an option:</p>
-                <a href="role_management.php">Role Dashboard</a>
+                <a href="test_role.php">Role Dashboard</a>
                 <a href="logout.php">Logout</a>
             <?php else: ?>
                 <p>You have user privileges. Choose an option:</p>
-                <a href="role_management.php">Role Dashboard</a>
+                <a href="test_role.php">Role Dashboard</a>
                 <a href="logout.php">Logout</a>
             <?php endif; ?>
         <?php else:
